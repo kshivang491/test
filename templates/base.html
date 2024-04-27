@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="/static/stylefile.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo"><a href="#">EcomSearch</a></div>
+        <div class="search">
+            <form method="get">
+                <input type="text" placeholder="search products" id="input" name="product">
+                <ion-icon class="s" name="search"></ion-icon>
+                <button type="submit" class="search_button">search</button>
+            </form>
+        </div>
+        <div class="heading">
+            <ul>
+                <li><a href="/" class="under {% if request.path == '/' %}active{% endif %}">HOME</a></li>
+                <!-- <li><a href="#" class="under">SHOP</a></li> -->
+                <!-- <li><a href="#" class="under">OUR PRODUCTS</a></li> -->
+                <li><a href="/" class="under">CONTACT US</a></li>
+                <li><a href="/About_us" class="under {% if request.path == '/About_us' %}active{% endif %}">ABOUT US</a></li>
+            </ul>
+        </div>
+    </header>
+{% block content %}{% endblock %}
+    <footer>
+        <div class="footer0">
+            <h1>EcomSearch</h1>
+        </div>
+         <div class="footer1 ">
+      Connect with us at<div class="social-media">
+        <a href="/">
+            <img src="https://www.edigitalagency.com.au/wp-content/uploads/Facebook-logo-blue-circle-large-transparent-png.png" alt="facebook">
+        </a>
+        <a href="/">
+            <img src="https://static-00.iconduck.com/assets.00/linkedin-icon-1024x1024-z5dvl47c.png" alt="linkedin">
+        </a>
+        <a href="/">
+            <img src="https://www.freeiconspng.com/thumbs/youtube-logo-png/hd-youtube-logo-png-transparent-background-20.png" alt="youtube">
+        </a>
+        <a href="/">
+            <img src="https://png.pngtree.com/png-clipart/20180626/ourmid/pngtree-instagram-icon-instagram-logo-png-image_3584853.png" alt="instagra">
+        </a>
+        <a href="/">
+            <img src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c53e.png" alt="twitter">
+        </a>
+      </div>
+    </div>
+        <div class="footer2">
+            <div class="product">
+                <div class="heading">Products</div>
+                <div class="div">Buy Products</div>
+                <div class="div">Search Products</div>
+                <div class="div">Compare Products</div>
+                <div class="div">About Us</div>
+            </div>
+            <div class="services">
+                <div class="heading">Services</div>
+                <div class="div">Contact Us</div>
+                <div class="div">Site Visit</div>
+                <div class="div">Brands</div>
+                <div class="div">Specials</div>
+            </div>
+            <div class="Company">
+                <div class="heading">Company</div>
+                <div class="div">Complaint</div>
+                <div class="div">Suggestions</div>
+                <div class="div">Privacy Policy</div>
+                <div class="div">Terms</div>
+            </div>
+            <div class="Get Help">
+                <div class="heading">Help & Support</div>
+                <div class="div">+91 8827518354</div>
+                <div class="div">kshivang491@gmail.com</div>
+                <div class="div">Help</div>
+                <div class="div">Support</div>
+            </div>
+        </div>
+        <div class="footer3">
+            Copyright ©
+            <h4>EcomSearch</h4>
+            2021-2030
+        </div>
+    </footer>
+</body>
+
+</html>
